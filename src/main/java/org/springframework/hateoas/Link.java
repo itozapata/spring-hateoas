@@ -50,6 +50,8 @@ public class Link implements Serializable {
 	private String rel;
 	@XmlAttribute
 	private String href;
+	@XmlAttribute
+	protected Boolean templated;
 
 	/**
 	 * Creates a new link to the given URI with the self rel.
@@ -99,6 +101,15 @@ public class Link implements Serializable {
 	 */
 	public String getRel() {
 		return rel;
+	}
+	
+	/**
+	 * Returns weather the href in this link is templated or not.
+	 * 
+	 * @return
+	 */
+	public Boolean getTemplated() {
+		return templated;
 	}
 
 	/**
