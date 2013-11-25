@@ -34,6 +34,8 @@ import org.springframework.util.StringUtils;
  * @author Oliver Gierke
  */
 @XmlType(name = "link", namespace = Link.ATOM_NAMESPACE)
+@org.codehaus.jackson.map.annotate.JsonSerialize(include=org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion.NON_NULL)
+@com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
 public class Link implements Serializable {
 
 	private static final long serialVersionUID = -9037755944661782121L;
